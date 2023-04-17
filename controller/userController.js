@@ -37,7 +37,6 @@ async function getUserConversations(req,res){
     const userData=req.body;
     const query=getConversedUsersQuery(userData)
     const conversedUsersResult=await Query(query)
-    console.log(userData)
     res.send(conversedUsersResult)
 
 }
@@ -46,7 +45,6 @@ async function getUnconversedUsers(req,res){
     const userData=req.body;
     const query=getUncoversedUsersQuery(userData)
     const unconversedUsersResult=await Query(query)
-    console.log(userData)
     res.send(unconversedUsersResult)
 }
 
